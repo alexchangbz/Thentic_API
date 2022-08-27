@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { useState }  from 'react'
 import axios from 'axios'
-import { useState } from 'react'
 import './create.css'
 
 const Create = () => {
@@ -65,7 +64,7 @@ const Create = () => {
                         <div className="result">
                             <span>Request ID: {contract.request_id}</span>
                             <a href={contract.transaction_url} target="_blank" rel="noopener noreferrer" className='btn'>Create Contract</a>
-                            <iframe src={contract.transaction_url} height={350} scrolling="no" frameborder="0"></iframe>
+                            <iframe title="contract" src={contract.transaction_url} height={350} scrolling="no" frameborder="0"></iframe>
                         </div>
                     ) : (
                         <div className="result">

@@ -7,11 +7,11 @@ const Contract = () => {
 
   const getContract = () => {
     axios.get("https://thentic.tech/api/contracts", {
-      key: "TIvTUQOM7p03pNBRFHfVCmsRCcsokMQg",
+      key: "EWy7vNwerkoOBDihNEjG7NLi5lhzE9eQ",
       chain_id: "97"
     }).then((response) => {
-      console.log("success", response.data)
-      setResponse(response.data)
+      console.log("success", response)
+      setResponse(`Successfully get data: ${response.data}`)
     }).catch(err => {
       console.log("Fail to connect", err)
     })
@@ -24,8 +24,8 @@ const Contract = () => {
         <h1>My Contract</h1>
       </div>
       <div className="contract-lists">
-        <button onClick={getContract} className="btn">Get Contract</button>
         <p>{response}</p>
+        <button onClick={getContract} className="btn">Get Contract</button>
       </div>
     </div>
   )
