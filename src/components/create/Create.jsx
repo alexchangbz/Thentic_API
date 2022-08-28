@@ -41,7 +41,7 @@ const Create = () => {
 
     return (
         <div className="create-container">
-            <div className="header">
+            <div className="header generate-container">
                 <h1>Generate your Smart Contract</h1>
                 <h4>{error}</h4>
                 <form>
@@ -73,7 +73,6 @@ const Create = () => {
                     )
                 }
             </div>
-            
         </div>
     )
 }
